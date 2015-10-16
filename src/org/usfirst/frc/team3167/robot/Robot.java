@@ -20,16 +20,19 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
 	private Joystick driveStick; 
+	
 	private Jaguar leftMotor; 
+	private Jaguar leftWheel;
 	private Jaguar rightMotor;
 	private RobotDrive drive;
 	private Ultrasonic sensor; 
 	double distance; 
 	
-    public void robotInit() 
+    public void robotInit()    
     {
-    	driveStick = new Joystick(1); 
+ 	driveStick = new Joystick(1); 
     	leftMotor = new Jaguar(1);
+    	leftWheel = new Jaguar(3); 
     	rightMotor = new Jaguar(2); 
     	drive = new RobotDrive(leftMotor, rightMotor);
     	sensor = new Ultrasonic(1, 2);
