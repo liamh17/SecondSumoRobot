@@ -22,7 +22,6 @@ public class Robot extends IterativeRobot {
 	private Joystick driveStick; 
 	
 	private Jaguar leftMotor; 
-	private Jaguar leftWheel;
 	private Jaguar rightMotor;
 	private RobotDrive drive;
 	private Ultrasonic sensor; 
@@ -31,8 +30,7 @@ public class Robot extends IterativeRobot {
     public void robotInit()    
     {
  	driveStick = new Joystick(1); 
-    	leftMotor = new Jaguar(1);
-    	leftWheel = new Jaguar(3); 
+    	leftMotor = new Jaguar(1); 
     	rightMotor = new Jaguar(2); 
     	drive = new RobotDrive(leftMotor, rightMotor);
     	sensor = new Ultrasonic(1, 2);
